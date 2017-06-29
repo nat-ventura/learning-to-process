@@ -1,15 +1,16 @@
-int circleX;
+float circleX;
+float circleY;
 
 void setup() {
   size(640, 360);
-  circleX = 50;
+  circleX = width/2;
 }
 
-void draw() {
+void draw() { 
   background(50);
 
   fill(255);
   ellipse(circleX, 180, 24, 24);
-  
-  circleX = circleX + 1;
+
+  circleX = circleX + random(-2, 2); // creates wiggle effect because moving randomly
 }
